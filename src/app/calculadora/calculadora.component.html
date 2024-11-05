@@ -1,0 +1,16 @@
+<div>
+  <h2>Calculadora</h2>
+  <div>
+    <button *ngFor="let num of numeros" (click)="agregarElemento(num)">
+      {{ num }} 
+    </button>
+    <button (click)="agregarElemento('+')">+</button>
+    <button (click)="agregarElemento('-')">-</button>
+    <button (click)="agregarElemento('*')">*</button>
+    <button (click)="agregarElemento('/')">/</button>
+    <button (click)="calcular()">=</button>
+    <button (click)="limpiar()">C</button>
+  </div>
+
+  <app-display [operacion]="operacion" [resultado]="resultado"></app-display>
+</div>
